@@ -33,6 +33,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 models:
   dbttest:
-    # Applies to all files under models/example/
     stage:
       materialized: table
+      database: PC_MATILLION_DB

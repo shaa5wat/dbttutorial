@@ -1,6 +1,5 @@
 {{ config(
-    schema= 'STAGE',
-    database= 'PC_MATILLION_DB' 
+    schema= 'STAGE'
 )}}
 
-SELECT * FROM "PC_MATILLION_DB"."RAW"."CUSTOMER"
+SELECT * FROM {{ source('RAW', 'CUSTOMER') }}

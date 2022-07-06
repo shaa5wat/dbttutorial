@@ -1,7 +1,13 @@
 version: 2
 sources:
+  - name: RAW
+    description: This is as source for STAGE
+    database: PC_MATILLION_DB
+    tables:
+      - name: CUSTOMER
+      - name: ORDERS
   - name: STAGE
-    description: This is RAW_TEST Database Source Tables used for creating STANDARD_TEST Layer
+    description: This is a source for Publish
     database: PC_MATILLION_DB
     tables:
       - name: CUSTOMER
