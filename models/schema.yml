@@ -6,9 +6,13 @@ sources:
     tables:
       - name: CUSTOMER
       - name: ORDERS
+      - name: LINEITEM
+      - name: NATION
   - name: STAGE
     description: This is a source for Publish
     database: PC_MATILLION_DB
     tables:
       - name: CUSTOMER
       - name: ORDERS
+      - name: LINEITEM
+      - name: NATION

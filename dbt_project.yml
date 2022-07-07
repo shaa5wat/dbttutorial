@@ -14,7 +14,7 @@ profile: 'default'
 # found in the "models/" directory. You probably won't need to change these!
 model-paths: ["models"]
 analysis-paths: ["analyses"]
-test-paths: ["tests"]
+test-paths: ["models"]
 seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
@@ -34,5 +34,8 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   dbttest:
     stage:
+      materialized: table
+      database: PC_MATILLION_DB
+    publish:
       materialized: table
       database: PC_MATILLION_DB
