@@ -2,4 +2,4 @@
     schema= 'STAGE'
 )}}
 
-SELECT * FROM {{ source('RAW', 'CUSTOMER') }}
+SELECT * FROM {{ source('RAW', 'V_CUSTOMER') }}

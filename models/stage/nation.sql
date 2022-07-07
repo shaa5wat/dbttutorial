@@ -2,4 +2,4 @@
     schema= 'STAGE'
 )}}
 
-SELECT * FROM {{ source('RAW', 'NATION') }}
+SELECT * FROM {{ source('RAW', 'V_NATION') }}

@@ -15,12 +15,8 @@ select
    ,O_ORDERPRIORITY
    ,O_SHIPPRIORITY
    ,O_CLERK
-from {{ source('STAGE', 'CUSTOMER') }} c 
+from {{ ref('customer') }} c 
     left join {{ source('STAGE', 'ORDERS') }} o 
         on c.c_custkey = o.o_custkey
 order by
     C_CUSTKEY
-
--- create raw folder , as views for all tables ( v_tablename)
--- read the data from raw_views instead of raw in stage
-
